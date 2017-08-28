@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <style>
+      .angular-google-map-container {
+          width: 100%;
+          height: 504px;
+      }
+      /*.bar-header
+      {
+
+    background-image: url('img/bg.jpg')!important;background-repeat:no-repeat!important; background-size:100%!important;
+    height: 80px!important;
+    color:#13234c!important;
+      }*/
+
+      .red{
+        color : #D83426 !important ;
+      }
+
+      .green{
+
+        color : green !important ;
+      }
+
+      .black{
+        color : black !important ;
+      }
+
+      /*.has-header
+      {
+          top:85px!important;
+      }*/
+      .bar .title{
+          height: 100%!important;
+      }
+      .calorybg
+      {
+          background-image: url('img/bg.png');background-repeat:no-repeat; background-size:100%
+      }
+      #loginForm {
+        margin: 120px 0 0;
+      }
+      .trans{
+          opacity: 0.80;
+      }
+
+      .ficon{
+        width: 30%;
+      }
+
+      .footIcon a{
+        text-align: center;
+        width: 25%;
+      }
+
+      /* css start */
+      /*.signup-btn {
+        background: #00cc00 !important;
+        color: #fff !important;
+      }*/
+      .submit-btn{
+        background: #000099 !important;
+        color: #fff !important;
+      }
+      .has-header {
+        /*background: #f9f9f9; top: 75px !important;*/
+        background-image: url('img/bg_color.png');background-repeat:no-repeat; background-size:100%; top: 75px !important;
+      }
+
+      .has-main {
+        /*background: #f9f9f9; top: 75px !important;*/
+        background-image: url('img/bg.png');background-repeat:no-repeat; background-size:100%; top: 75px !important;
+      }
+
+      .has-home {
+        background-image: url('img/bg_color.png') !important;
+        background-repeat:repeat; background-size:cover;
+      }
+
+      .btnRight{
+        position: absolute;
+        right: 23px;
+        top: 31px;
+      }
+      
+      .bar-header { background: #003399; height: 80px!important;
+          color:#000099!important;  }
+          #loginForm .list label {
+        margin: 0;
+      }
+
+      .home{
+        background-color:#000;
+        margin: 0px 0px 0px 50px;
+        width:70%;
+        color:red;
+        border-style:solid;
+        border-width:3px;
+        border-color:#405D6D;
+        text-align:center;
+        font-size: 20px;
+      }
+      .body-content-text { color: #fff; }
+      h4{ color: #fff !important; }
+
+      .li-view{ width;100%;padding:20px !important;text-align:center; font-size:18px !important;; font-weight:bold !important;}
+       .dd_view{width:100% !important; height:50px;}
+
+       /* 16th Aug */
+
+       .right-block {/* float: right; */left: 100px;}
+       .wrapper-middle {width: 70%; margin: 0 auto;}
+
+    </style>
+
+   <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+   <link rel="stylesheet" href="css/jquery-ui.css">
+  <!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
+  <script src="js/jquery-1.10.2.js"></script>
+  <!--<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+  <script src="js/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="cordova.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <!-- scripts here -->
+    <script src="js/global.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="lib/ionic/js/ionic-close-popup.js"></script>
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7" class="platform-android platform-cordova platform-webview">
+    <ion-nav-view></ion-nav-view>
+  <div>
+    <div>
+        <!--<ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar> -->
+
+    </div>
+</div>
+
+<script id="page1.html" type="text/ng-template">
+
+  <div style="margin:0 auto;text-align:center; background; background-image: url('img/bg-splash.png'); background-repeat:no-repeat; background-size:100% ">
+    <img src="img/logo.png"  style="margin-top:15%; max-width: 80%; "/>
+    <div style="width:90%;margin:20px auto 0;text-align:center; padding-left:5%;padding-right:5%">
+      <a href="#/signup" class="button button-energized button-block icon-left new-user"><b>NEW USER</b></a>
+      <br />
+      <a href="#/login" class="button button-energized button-block icon-left new-user"><b>LOGIN</b></a>
+    </div>
+    <div style="margin-top: 8%;">
+    	<hr style="width: 35px;box-sizing: content-box;height: 0;display: inline-block;vertical-align: middle;">
+    	<p style="color: #fff;font-size: 15px;text-align: center;display: inline-block;padding: 0 5px;">WHERE WINNERS PLAY</p>
+    	<hr style="width: 35px;box-sizing: content-box;height: 0;display: inline-block;vertical-align: middle;">
+    </div>
+  </div>
+
+</script>
+
+<script id="page2.html" type="text/ng-template">
+  <ion-view title="Login" class="calorybg">
+    <ion-content padding="true" class="">
+
+    <ion-header-bar align-title="center" class="bar-energized">
+    <div class="buttons">
+      <!--<button class="button-icon icon ion-ios7-arrow-back" ng-click="myGoBack()"></button>-->
+    </div>
+    <h1 class="title">LOGIN</h1>
+  </ion-header-bar>
+
+      <form id="loginForm" name="loginForm">
+        <ion-list>
+          <label class="item item-input" style="border-radius: 5px" >
+            <input type="email" id="email" name="email" placeholder="Email" ng-model="loginData.email">
+          </label>
+          <br/>
+
+          <label class="item item-input" style="border-radius: 5px" >
+            <input type="password" id="password" name="password" placeholder="Password" ng-model="loginData.password">
+          </label>
+        </ion-list>
+
+        <div class="spacer" style="height: 40px;"></div>
+        <button class="button button-energized button-block signup-btn new-user" ng-click="login()"><b>LOGIN</b></button>
+        <a href="#/forgotpassword" class="button button-energized button-clear button-block " style="color:#fff;font-weight:normal">Forgot password?</a>
+        <div style="text-align:center;color:#fff;font-weight:normal">OR</div>
+        <a href="#/signup" class="button button-energized button-clear button-block " style="color:#fff;font-weight:normal">Create an account</a>
+      </form>
+      <div style="margin-top: 8%;">
+    	<hr style="width: 35px;box-sizing: content-box;height: 0;display: inline-block;vertical-align: middle;">
+    	<p style="color: #fff;font-size: 15px;text-align: center;display: inline-block;padding: 0 5px;">WHERE WINNERS PLAY</p>
+    	<hr style="width: 35px;box-sizing: content-box;height: 0;display: inline-block;vertical-align: middle;">
+    </div>
+    </ion-content>
+
+</script>
+
+
+
+<script id="page3.html" type="text/ng-template">
+
+  <ion-header-bar align-title="center" class="bar-energized">
+    <div class="buttons">
+      <button class="button-icon icon ion-ios7-arrow-back" ng-click="myGoBack()"></button>
+    </div>
+    <h1 class="title">New User</h1>
+  </ion-header-bar>
+
+
+  <ion-content padding="true" scroll="true" class="has-main">
+    <form>
+      <ion-list>
+        <label class="item item-input">
+          <input type="text" placeholder="Enter First Name" ng-model="signup.firstName">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter Last Name" ng-model="signup.lastName">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter email id" ng-model="signup.email">
+        </label>
+
+        <label class="item item-select">
+          <span class="input-label">Country Code</span>
+            <select id="countryCode" class="input-dropdwn" ng-model="signup.countrycode"></select>
+             <option>Country Code</option>
+        </label>
+
+        <label class="item item-input">
+          <input type="number" placeholder="Enter mobile number" ng-model="signup.mobile">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter date of birth" onfocus="(this.type='date')" ng-model="signup.dob" id="date">
+        </label>
+
+        <!-- <label class="item item-input">
+          <input type="text" placeholder="Enter loyality card type" ng-model="signup.loyalityCardType">
+        </label> -->
+
+        <label class="item item-select">
+          <span class="input-label">Loyality Card Type</span>
+          <select ng-model="signup.loyalityCardType" class="input-dropdwn">
+            <option ng-value="1">Gold Card</option>
+            <option ng-value="2">Silver Card</option>
+            <option ng-value="3">Club Seven</option>
+          </select>
+        </label>
+
+        <label class="item item-input">
+          <input type="number" placeholder="Enter loyality card number" ng-model="signup.loyalityCardNumber">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter Address" ng-model="signup.address">
+        </label>
+
+        <!-- <label class="item item-input ">
+          <input type="text" placeholder="Enter City" ng-model="signup.city">
+        </label> -->
+
+        <label class="item item-input">
+          <input type="password" placeholder="Enter Password" ng-model="signup.password">
+        </label>
+
+        <label class="item item-input">
+          <input type="password" placeholder="Enter Confirm Password" ng-model="signup.cpassword">
+        </label>
+      </ion-list>
+      <button class="button button-energized button-block signup-btn new-user" ng-click="CreateUser()"><b>Sign up</b></button>
+    </form>
+  </ion-content>
+
+</script>
+
+<script id="mainContainer.html" type="text/ng-template">
+  <ion-side-menus enable-menu-with-back-views="true">
+    <ion-pane ion-side-menu-content>
+      <ion-nav-view name="main"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left" width="210" >
+    <!-- <ion-side-menu side="left" is-enabled="true" width="250" class="menu menu-left" style="width: 275px; z-index: 0;"> -->
+
+      <ion-content has-header="true" style="background-color:red;color:#C7185B;">
+      <!-- 640A25 -->
+        <ul class="list">
+          <a menu-close ui-sref="main.page4" class="item" ng-click="" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Home</a>
+          <a menu-close ui-sref="#" class="item" ng-click="sendEmail()" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Email</a>
+          <a menu-close ui-sref="#" class="item" ng-click="clicked()" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Chat</a>
+
+          <!--/* ************************ DATE : 16-4-2017  **************************** */-->
+          <a menu-close ui-sref="#" class="item" ng-click="ManageShift()" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Manage Shift</a>
+          <a menu-close ui-sref="#" class="item" ng-click="AddEmployee()" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Add Employee</a>
+          <a menu-close ui-sref="#" class="item" ng-click="EmployeeShift()" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Employee Shift</a>
+          <!--/* ************************ DATE : 16-4-2017  **************************** */-->
+
+          <a menu-close ui-sref="main.page11" class="item" ng-click="" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Edit Profile</a>
+          <a menu-close ui-sref="main.page10" class="item" ng-click="" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Change Password</a>
+          <a menu-close ui-sref="main.about" class="item" ng-click="" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">About Us</a>
+          <a menu-close ui-sref="main.contact" class="item" ng-click="" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Contact Us</a>
+
+          <!--/* ************************ DATE : 4-5-2017  **************************** */-->
+          <a menu-close ui-sref="main.jackpot_list" class="item" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Live Jackpot</a>
+          <!--/* ************************ DATE : 4-5-2017  **************************** */-->
+
+          <a menu-close ui-sref="page2" class="item" ng-click="logOut()" style="background-color:#640A25;color:#fff;border:0px; font-size: 20px;">Log Out</a>
+
+
+        </ul>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>
+</script>
+
+<script id="page4.html" type="text/ng-template">
+
+<ion-header-bar align-title="center" class="bar-energized" >
+<div class="buttons">
+   <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+</div>
+<h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+
+</ion-header-bar>
+    <ion-content padding="true" scroll="true" class="has-home">
+
+      <ion-list>
+
+        <br />
+        <!--<a menu-close ui-sref="main.intro" class="item" ng-click="" style="background : url('img/bar.png') no-repeat scroll 0 0;margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Intro</a>
+        <br />
+        <a menu-close ui-sref="main.slots" class="item" ng-click="" style="background-color:rgba(0,0,0,0.8);margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Slots</a>
+        <br />
+        <a menu-close ui-sref="main.casino" class="item" ng-click="" style="background-color:rgba(0,0,0,0.8);margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Casino</a>
+        <br />
+        <a menu-close ui-sref="main.mercury" class="item" ng-click="" style="background-color:rgba(0,0,0,0.8);margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Mercury Bar</a>
+        <br />
+        <a menu-close ui-sref="main.loyalty" class="item" ng-click="" style="background-color:rgba(0,0,0,0.8);margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Loyalty Club</a>
+        <br />
+        <a menu-close ui-sref="main.events" class="item" ng-click="" style="background-color:rgba(0,0,0,0.8);margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Events</a>
+        <br />
+        <a menu-close ui-sref="main.gamming" class="item" ng-click="" style="background-color:rgba(0,0,0,0.8);margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Gaming</a>
+        <br />
+        <a menu-close ui-sref="main.jackpot_list" class="item" ng-click="" style="background-color:rgba(0,0,0,0.8);margin:0 auto;width:70%;color:#775F32;border:medium none;text-align:center;font-size: 20px;">Progessive Jackpot</a>-->
+
+        <div class="wrapper-middle">
+
+        <br>
+        <div class="left-block-parent" style="height: 50px;font-size: 20px;">
+	        <a menu-close="" ui-sref="main.intro" class="item left-block" ng-click="" style="background: url('img/info.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;height: 50px;font-size: 20px;display: inline-block;position: relative;" href="#/main/intro">
+	        <p>Intro</p>
+        </a>
+        </div>
+        
+        <a menu-close="" ui-sref="main.slots" class="item right-block" ng-click="" style="background: url('img/shots.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/slots">Slots</a>
+        <br>
+        <a menu-close="" ui-sref="main.casino" class="item left-block" ng-click="" style="background: url('img/casino.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/casino">Casino</a>
+        
+        <a menu-close="" ui-sref="main.mercury" class="item right-block" ng-click="" style="background: url('img/bar.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/mercury">Mercury Bar</a>
+        <br>
+        <a menu-close="" ui-sref="main.loyalty" class="item left-block" ng-click="" style="background: url('img/card.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/loyalty">Loyalty Club</a>
+       
+        <a menu-close="" ui-sref="main.events" class="item right-block" ng-click="" style="background: url('img/event.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/events">Events</a>
+        <br>
+        <!-- <a menu-close="" ui-sref="main.gamming" class="item left-block" ng-click="" style="background: url('img/bar.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/gamming">Gaming</a>
+       
+        <a menu-close="" ui-sref="main.jackpot_list" class="item right-block" ng-click="" style="background: url('img/bar.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/jackpot_list">Progessive Jackpot</a>
+        <br> -->
+      </div>
+
+        <br />
+      </ion-list>
+    </ion-content>
+
+    <ion-footer-bar style="background-color: #000;" class="footIcon">
+      <a onclick="javascript:window.open('https://www.facebook.com/grankaz.sc/', '_system');">
+        <img class="ficon" src="img/facebook.png">
+      </a>
+      <a onclick="javascript:window.open('https://twitter.com/grankaz', '_system');">
+        <img class="ficon" src="img/twitter.png">
+      </a>
+      <a onclick="javascript:window.open('http://www.instagram.com/gran_kaz', '_system');">
+        <img class="ficon" src="img/instagram.png">
+      </a>
+      <a onclick="javascript:window.open('https://www.youtube.com/watch?v=9nOy4yRk-p0', '_system');">
+        <img class="ficon" src="img/youTube.png">
+      </a>
+      <!-- <a href="http://twitter.com/bgardner"><i class="icon ion-social-twitter"></i></a>
+      <a href="http://instagram.com/bgardner"><i class="icon ion-social-instagram-outline"></i></a>       -->
+  </ion-footer-bar>
+
+</script>
+
+<script id="page5.html" type="text/ng-template">
+ <ion-header-bar align-title="center" class="bar-energized">
+    <div class="buttons">
+      <button class="button-icon icon ion-ios7-arrow-back" ng-click="myGoBack()"></button>
+    </div>
+    <h1 class="title">FORGOT PASSWORD</h1>
+  </ion-header-bar>
+       <div style="margin:0 auto;text-align:center; background; background-image: url('img/bg.png');background-repeat:no-repeat; background-size:100%"></div>
+    <ion-content class="has-main">
+      <div style="width:90%;margin:0 auto;text-align:center; padding-left:5%;padding-right:5%">
+        <form>
+          <label class="item item-input">
+            <span class="input-label">E-mail</span>
+            <input  id= "forgetemail" type="text" ng-model="forgetpassword.email" placeholder="abc@abc.com">
+          </label>
+          <button class="button button-energized button-block new-user" ng-click="forgetPassword()"><b>SUBMIT</b></button>
+        </form>
+        <div style="margin-top: 8%;">
+    		<hr style="width: 35px;box-sizing: content-box;height: 0;display: inline-block;vertical-align: middle;">
+    	<p style="color: #fff;font-size: 15px;text-align: center;display: inline-block;padding: 0 5px;">WHERE WINNERS PLAY</p>
+    	<hr style="width: 35px;box-sizing: content-box;height: 0;display: inline-block;vertical-align: middle;">
+      </div>
+    </ion-content>
+</script>
+
+
+<script id="intro.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+   <a menu-close="" ui-sref="main.intro" class="item left-block" ng-click="" style="background: url('img/info.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;height: 50px;font-size: 20px;display: inline-block;position: relative;" href="#/main/intro"></a>
+    <h4>Intro</h4>
+      <img src="img/intro.jpg" style="width: 100%; height: 40%;">
+    <ul class="body-content-text">
+      <li><strong>Greater Gaming Comfort.</strong></li>
+      <p>
+        Low Minimum Bets! With the widest range of denomination - from 1c to R100. Traditional reel slot machines and the latest multi-line video slots.
+      </p>
+
+      <li><strong>Experience The Magic</strong></li>
+      <p>
+        Modern entertainment centre for discerning slot players who enjoy the relaxation of gaming in a pleasant, attractive and spacious atmosphere.
+      </p>
+
+      <li><strong>Regular Live Entertainment</strong></li>
+      <p>
+        An exciting and lively bar area has large screen television featuring the latest televised sporting events and provides regular live entertainment.
+      </p>
+    </ul>
+  </ion-content>
+</script>
+
+<script id="slots.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+  <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+  	<a menu-close="" ui-sref="main.slots" class="item right-block" ng-click="" style="background: url('img/shots.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/slots">Slots</a>
+    <h4>Slots</h4>
+      <img src="img/slot.jpg" style="width: 100%; height: 40%;">
+
+    <ul class="body-content-text">
+      <p><strong>Why Gaming is Better at Grankaz ?</strong></p>
+
+        <li>
+          The Gran Kaz was conceptualized and created in 2014 to offer the over 18’s an updated and modern entertainment center for discerning slot players who enjoy the relaxation of gaming in a pleasant, attractive and spacious atmosphere
+        </li>
+        <br>
+        <li>
+          Offering more than 150 of the latest most technologically advanced slot machines in a visually exciting, spacious building, climate controlled with comfortable seating gives the Gran Kaz a distinctive position above competitors.
+        </li>
+        <br>
+        <li>
+          Gran Kaz offers the convenience of smart cashless gaming creating more winning opportunities. No queues, no fuss, just sheer gaming enjoyment. Clean Hands – No more grubby hands from coins. Gran Kaz provides generous spacing between gaming positions affording guests greater gaming comfort
+        </li>
+        <br>
+        <li>
+          <p><strong>Most Popular Games</strong></p>
+          <p>
+            RED EYE NICKELS, SIRENS, TREASURE OF TROY, DOUBLE NUTTY JACKPOT, SIBERIAN STORM, GOLDEN GODDESS, SUMATRAN STORM, CASH COVE, RICHIE ROOSTER, BOMBAY, BREAK THE BANK, DOUBLE JACKPOT, STINKIN RICH, MAYAN RICHES.
+          </p>
+        </li>
+        <br>
+        <li>
+          <ul class="body-content-text">
+            <p><strong>Our services include:</strong></p>
+            <li>• Trimeline AVP</li>
+            <li>• G-enex wide video</li>
+            <li>• Innovator 3 reel</li>
+            <li>• SMLD</li>
+            <li>• SAVP</li>
+            <li>• G23</li>
+            <li>• G23 LCD</li>
+          </ul>
+        </li>
+      </ul>
+  </ion-content>
+</script>
+
+<script id="casino.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+  	 <a menu-close="" ui-sref="main.casino" class="item left-block" ng-click="" style="background: url('img/casino.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/casino">Casino</a>
+  	 <h4>Casino</h4>
+      <img src="img/casino.jpg" style="width: 100%; height: 40%;">
+    <ul class="body-content-text">
+      <li>
+        Here's where you can experience the magic of a world class casino, With a "Gold Standard Of Service".
+      </li>
+      <br>
+      <li>
+        You can play on 4 different Roulette  Tables, 4 different Black Jack Tables and 2 big Poker Tables where you can place your bet.
+      </li>
+      <br>
+      <li>
+        Also you can enjoy Soft Drinks, Hard Drinks and Snakes inside casino bar.
+      </li>
+      <br>
+      <li>
+        <strong>
+          Openning Hours:
+        </strong>
+        <br>
+      </li>
+        <ul>
+          <li>Open on Sundays to Thursdays</li>
+          <li>FROM 2.00 PM TO 2.00 AM</li>
+          <li>FRIDAYS AND SATURDAYS</li>
+          <li>FROM 2.00 PM TO 4.00 AM </li>
+        </ul>
+    </ul>
+
+  </ion-content>
+</script>
+
+<script id="mercury.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+  	<a menu-close="" ui-sref="main.mercury" class="item right-block" ng-click="" style="background: url('img/bar.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/mercury">Mercury Bar</a>
+  	<h4>Mercury Bar</h4>
+      <!-- <img src="img/mercury.jpg" style="width: 100%; height: 40%;"> -->
+      <img src="img/mercury1.jpg" style="width: 100%; height: 40%;">
+    <ul class="body-content-text">
+      <li>
+        <p>
+          One of the largest bars in Seychelles offers the most competitive prices on all drinks including signature cocktails, with a small but unique bar menu for snacks and easy bites
+        </p>
+      </li>
+
+      <li>
+        <p>
+          An exciting and lively bar area has large screen television featuring the latest televised sporting events and provides regular live entertainment.
+        </p>
+      </li>
+    </ul>
+
+    <h4>Royal Flush Bar</h4>
+    <img src="img/RoyalFlushBar.png" style="width: 100%; height: 40%;">
+    <ul class="body-content-text">
+      <li>
+        <p>
+          In the spirit of providing luxury and relaxation, Gran Kaz casino never falls short. Introducing Royal Flush Bar, the ideal respite between gaming activites and the perfect venue for laid-back, relaxed conversations. It also serves coffee, teas, Modern Mixes of Cocktails and Classic Drinks.
+        </p>
+      </li>
+      <li>
+        <p>
+          At Gran Kaz, we believe in taking things slow - done in the right place, at the right time. Although in the heart of casino surroundings, the calm atmosphere offers an ideal ambience for relaxation. Open for Sun-Thur 4pm-2am /Fri-Sat 4pm -4am, this is the perfect place to meet up for a drink before or after dinner. Excellent venue to see and be seen.
+        </p>
+      </li>
+    </ul>
+
+  </ion-content>
+</script>
+
+<script id="loyalty.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+  	<a menu-close="" ui-sref="main.loyalty" class="item left-block" ng-click="" style="background: url('img/card.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/loyalty">Loyalty Club</a>
+  	<h4>Loyalty Club</h4>
+      <img src="img/loyalty_club.jpg" style="width: 100%; height: 40%;">
+    <ul class="body-content-text">
+      <li><strong>Gold and Silver Card</strong></li>
+      <p>
+        Gran Kaz Rewards Program - The First and only Casino with a 3 tier Reward Program for loyal Players in Seychelles.
+        Members enjoy exclusive privileges that extend beyond gaming.
+        The Membership entitles you to a wealth of exciting freebies, discounts, rewards and other privileges.
+        Each Membership category requires specific status points and provides corresponding number of privileges.
+      </p>
+
+      <li><strong>Here's How you can EARN POINTS :</strong></li>
+      <p>
+        Simply use your card whenever you play at Gran Kaz Entertainment Center. Enjoy your stay at Gran Kaz Entertainment Center and all the rewards you'll receive.
+        Contact Gran Kaz if you have questions about the membership program and the sign up to start your way up the ladder.
+        Get your Club Seven, Silver or Gold Membership today! Each one opening up a wealth of rewarding experiences for members.
+      </p>
+
+      <li><strong>Club Seven VIP Card</strong></li>
+      <p>
+        Our Club Seven VIP card is offered simply by registering with us. No charge and no deposit necessary. Just Ask for a Club Seven VIP membership and complete the application form at the   cash desk, then you can then redeem your cash from the Cash Desk or go away with the credit on the card ready for your next visit. When you return, continue where you left off with the same credit as before. Your cash balance is secure and safe on your card.
+      </p>
+
+      <li><strong>Day Card</strong></li>
+      <p>
+        Our Day card is offered direct to the customer from the Cash Desk no forms, necessary. A deposit of Rs25.00 will be taken from the first transaction, which is refundable on return of the card. Just Ask for a day card at the cash desk, give the cashier the amount of cash you want to play with and they will place the amount on the card for you to play (holding SR25.00 deposit).
+      </p>
+      <p>
+        To start playing, the machine will automatically transfer credits to the machine and you can start play.
+      </p>
+      <p>
+        (Terms and Conditions Apply). Give the cashier the amount of cash you want to play with and they will place the amount on the card for you to play.
+      </p>
+    </ul>
+  </ion-content>
+</script>
+
+<script id="events.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+  	<a menu-close="" ui-sref="main.events" class="item right-block" ng-click="" style="background: url('img/event.png') no-repeat scroll 0 0 / 50px auto;margin:0 auto;width: 50px;color:#775F32;border:medium none;text-align:center;font-size: 20px;display: inline-block;height: 50px;position: relative;/* left: 100px; */" href="#/main/events">Events</a>
+  	<h4>Events</h4>
+    
+    <div id="EventDiv" class="body-content-text">    	
+    </div>
+   <!--  <img src="img/events.jpg" style="width: 100%; height: 40%;">
+    <ul class="body-content-text">
+      <li>
+        <strong>HAPPY HOURS:</strong>
+      </li>
+
+      <p>
+        Play during the HAPPY HOURS and receive TRIPLE points.
+        <ul>
+          <li>Wednesday 06.00 PM to 11:00 PM</li>
+          <li>Friday 04:00 PM to 08:00 PM</li>
+          <li>Saturday 04:00 PM to 08:00 PM</li>
+          <li>Sunday 03:00 PM to 06:00 PM</li>
+        </ul>
+      </p>
+
+      <li>
+        <strong>HAPPY BIRTHDAY - Lets Celebrate</strong>
+      </li>
+
+      <ul>
+        <li>Club Seven VIP members receives SR 500 credits</li>
+      </ul>
+
+      <br>
+      <li>
+        <strong>WAKE UP & WIN :: Early Bird Special</strong>
+      </li>
+
+      <p>For Predetermind amount of POINTS earned customers will receive SR 50.
+        <ul>
+          </li>10.00AM TO 12.00PM</ll>
+        </ul>
+      </p>
+    </ul>
+ -->
+  </ion-content>
+</script>
+
+<script id="gamming.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+
+    <h4>Gaming</h4>
+    <img src="img/gamming.jpg" style="width: 100%; height: 40%;">
+    <ul class="body-content-text">
+      <li>
+        Recreational gaming is low risk gaming. It involves responsible spending and setting of personal guidelines to govern your behaviour. Managing gaming expenditure ensures both enjoyment and peace of mind. Participate in achieving this goal by setting sensible limit to your gaming activities.
+      </li>
+
+      <br>
+      <p>
+        <strong>Characteristics of Responsible Gaming</strong>
+
+        <li>
+          Low-risk gaming has pre-determined acceptable limit for losses. Any money spent on gaming needs to be considered an entertainment cost. This will vary depending on your income and expenses.
+        </li>
+        <br>
+        <li>
+          Low-risk gaming is recreational. The benefits of gaming are found in the excitement of taking a chance and the thrill of winning. Financial gain should not be the main motivation for gaming. Gaming is not going to get you out of debt.
+        </li>
+      </p>
+    </ul>
+
+  </ion-content>
+</script>
+
+<script id="progressive.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+
+    <h4>Progressive Jackpot</h4>
+  </ion-content>
+</script>
+
+<script id="about.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+
+    <h4>About us</h4>
+    <h5><strong><center>Gran Kaz Entertainment Center</center></strong></h5>
+    <ul class="body-content-text">
+    <p>
+      The Gran Kaz was conceptualized and created in 2014 to offer the over 18’s an updated and modern entertainment centre for discerning slot players who enjoy the relaxation of gaming in a pleasant, attractive and spacious atmosphere.
+    </p>
+
+    <p>
+      Offering 149 of the latest most technologically advanced slot machines in a visually exciting, spacious building, climate controlled with comfortable seating gives the Gran Kaz a distinctive position above competitors.
+    </p>
+
+    <p>
+      Gran Kaz offers the convenience of smart cashless gaming creating more winning opportunities. No queues, no fuss, just sheer
+      gaming enjoyment. Clean Hands – No more grubby hands from coins. Gran Kaz provides generous spacing between gaming positions affording guests greater gaming comfort.
+    </p>
+
+    <p>
+      Low Minimum Bets! With the widest range of denomination - from 1c to R100. Traditional reel slot machines and the latest multi-line video slots.
+    </p>
+    </ul>
+  </ion-content>
+</script>
+
+<script id="contact.html" type="text/ng-template">
+
+  <ion-header-bar align-title="center" class="bar-energized" >
+
+    <div class="buttons">
+
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+
+    </div>
+
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+
+    <h4 style="text-align: center;">Contact us</h4>
+
+    <form>
+
+      <ion-list>
+
+        <label class="item item-input ">
+          <input type="text" placeholder="Name" ng-model="contact.name">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Email" ng-model="contact.email">
+        </label>
+
+        <label class="item item-input">
+          <textarea id="feedback" name="feedback" rows="7" cols="30" placeholder="Enter your feedback or enquire here" ng-model="contact.feedback"></textarea>
+        </label>
+
+      </ion-list>
+      <button class="button button-energized button-block signup-btn new-user" ng-click="ContactUs()"><b>Submit</b></button>
+    </form>
+
+    <ul class="body-content-text">
+    <p>
+      Mercury House, Francis Rachel Street,
+      Victoria - Seychelles
+    </p>
+    <p>
+      info@grankaz.sc  4303780
+    </p>
+    </ul>
+  </ion-content>
+</script>
+
+<script id="page10.html" type="text/ng-template">
+ <ion-header-bar align-title="center" class="bar-energized" >
+<div class="buttons">
+   <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+   <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+</div>
+<h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+
+</ion-header-bar>
+    <ion-content padding="true" scroll="true" class="has-header">
+     <h4>Change Password</h4>
+     <form>
+        <label class="item item-input">
+          <input  id= "changeemail" disabled type="email" ng-model="changepassword.email" placeholder="abc@abc.com">
+        </label>
+
+        <label class="item item-input">
+          <input  id= "changeoldpass" type="password" ng-model="changepassword.oldPass" placeholder="Enter old password">
+        </label>
+
+        <label class="item item-input">
+          <input  id= "changenewpass" type="password" ng-model="changepassword.newPass" placeholder="Enter new password">
+        </label>
+        <button class="button button-energized button-block signup-btn new-user" ng-click="changePassword()">Submit</button>
+      </form>
+    </ion-content>
+</script>
+
+<script id="page11.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+    <form>
+      <ion-list>
+
+        <label class="item item-input ">
+          <input type="text" placeholder="Enter First Name" ng-model="edit.firstName">
+        </label>
+
+        <label class="item item-input ">
+          <input type="text" placeholder="Enter Last Name" ng-model="edit.lastName">
+        </label>
+
+        <!-- <label class="item item-input">
+          <input type="date" placeholder="Date of Birth" ng-model="edit.dob">
+        </label> -->
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter date of birth" onfocus="(this.type='date')" ng-model="edit.dob" id="date">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter email id" ng-model="edit.email" disabled="disabled">
+        </label>
+
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter country code" ng-model="edit.countrycode" disabled="disabled">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter mobile number" ng-model="edit.mobile" disabled="disabled">
+        </label>
+
+
+        <!-- <label class="item item-input">
+          <input type="text" placeholder="Enter loyality card type" ng-model="edit.loyalityCardType">
+        </label> -->
+
+        <label class="item item-select">
+          <span class="input-label">Loyality Card Type</span>
+          <select data-ng-options="o.name for o in loyalityCardTypeOpts" ng-model="edit.loyalityCardType">
+            <option ng-value="1">Gold Card</option>
+            <option ng-value="2">Silver Card</option>
+            <option ng-value="3">Club Seven</option>
+          </select>
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Enter loyality card number" ng-model="edit.loyalityCardNumber">
+        </label>
+
+        <label class="item item-input ">
+          <input type="text" placeholder="Enter Address" ng-model="edit.address">
+        </label>
+
+        <!-- <label class="item item-input ">
+          <input type="text" placeholder="Enter City" ng-model="edit.city">
+        </label> -->
+      </ion-list>
+      <button class="button button-energized button-block signup-btn new-user" ng-click="editUser()">Save Profile</button>
+    </form>
+  </ion-content>
+
+</script>
+
+    <!--/* ************************ DATE : 16-4-2017  **************************** */-->
+<script id="manage_employee.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+    <h4>Categories</h4>
+
+      <ul class="body-content-text">
+        <li class="li-view" ng-repeat="department in categorydetails" ng-click="getEmployeeOfDepartment(department)">
+          <p>{{department.sCat}}</p>
+        </li>
+      </ul>
+  </ion-content>
+</script>
+
+
+<script id="employee_list.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+    <h4>Employee</h4>
+
+    <ul class="body-content-text">
+      <li class="li-view" ng-repeat="emp in employeeList" ng-click="goToEmpDetail(emp)">
+        <p>{{emp.sName}}</p>
+      </li>
+    </ul>
+  </ion-content>
+</script>
+
+
+<script id="employee_detail.html" type="text/ng-template">
+  <ion-header-bar align-title="center" class="bar-energized" >
+    <div class="buttons">
+      <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+      <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+    </div>
+    <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+  </ion-header-bar>
+
+  <ion-content padding="true" scroll="true" class="has-header">
+
+    <h4>YEARS</h4>
+    <select class="dd_view" ng-model="currentYear2"  ng-change="showSelectValueYear(currentYear2)">
+      <option selected="selected" value=""></option>
+      <option ng-repeat="field in yearList" value="{{field}}">{{field}}</option>
+    </select>
+    <!--<select allow-clear="true" class="dd_view" ng-model="currentYear2" ng-options="field for field in yearList" ng-change="showSelectValueYear(currentYear2)"></select>-->
+
+    <h4>Months</h4>
+    <select class="dd_view" ng-model="currentMonth2"  ng-change="showSelectValueMonth(currentMonth2)">
+      <option selected="selected" value=""></option>
+      <option ng-repeat="field2 in monthList" value="{{field2}}">{{field2}}</option>
+    </select>
+    <!--<select allow-clear="true" class="dd_view" ng-model="currentMonth2" ng-options="field2 for field2 in monthList"  ng-change="showSelectValueMonth(currentMonth2)"></select>-->
+
+    <button class="button button-energized button-block signup-btn new-user" ng-click="getEmployeeShift()">View Shift</button>
+
+    <ul>
+      <li class="li-view" ng-repeat="shift in viewShift" >{{activeMonth}}{{$index+1}} : {{showShift(shift)}}</li>
+    </ul>
+
+
+
+  </ion-content>
+</script>
+
+    <!--/* ************************ DATE : 16-4-2017  **************************** */-->
+
+
+    <!--/* ************************ DATE : 4-5-2017  **************************** */-->
+
+    <script id="jackpot_list.html" type="text/ng-template">
+      <ion-header-bar align-title="center" class="bar-energized" >
+        <div class="buttons">
+          <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+          <a menu-close ui-sref="main.page4" class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack()"></a>
+        </div>
+        <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+      </ion-header-bar>
+
+      <ion-content padding="true" scroll="true" class="has-home">
+
+        <ion-list>
+
+          <br />
+          <a menu-close class="item" ng-click="goToLiveUpdate('gran_jackpot')" style="background-color:#fff;margin:0 auto;width:70%;color:#640A25;border:medium none;text-align:center;font-size: 20px;">Gran Jackpot</a>
+          <br />
+          <a menu-close class="item" ng-click="goToLiveUpdate('mardi_jackpot')" style="background-color:#fff;margin:0 auto;width:70%;color:#640A25;border:medium none;text-align:center;font-size: 20px;">Mardi Graz</a>
+          <br />
+          <a menu-close class="item" ng-click="goToLiveUpdate('karnival_jackpot')" style="background-color:#fff;margin:0 auto;width:70%;color:#640A25;border:medium none;text-align:center;font-size: 20px;">Karnival Mystery</a>
+          <br />
+          <a menu-close class="item" ng-click="goToLiveUpdate('mississippi_jackpot')" style="background-color:#fff;margin:0 auto;width:70%;color:#640A25;border:medium none;text-align:center;font-size: 20px;">Mississippi Gambler</a>
+          <br />
+          <a menu-close class="item" ng-click="goToLiveUpdate('double_jackpot')" style="background-color:#fff;margin:0 auto;width:70%;color:#640A25;border:medium none;text-align:center;font-size: 20px;">Double Nutty</a>
+          <br />
+          <a menu-close class="item" ng-click="goToLiveUpdate('redeye_jackpot')" style="background-color:#fff;margin:0 auto;width:70%;color:#640A25;border:medium none;text-align:center;font-size: 20px;">Red Eye Nickle</a>
+          <br />
+        </ion-list>
+
+
+
+      </ion-content>
+    </script>
+
+    <script id="jackpot_detail.html" type="text/ng-template">
+      <ion-header-bar align-title="center" class="bar-energized" >
+        <div class="buttons">
+          <button  menu-toggle="left" class="button button-icon icon ion-navicon mymenu" style="z-index:9999; padding-top:10px; padding-left:15px;"></button>
+          <a menu-close class="button-icon icon ion-ios7-arrow-back btnRight" ng-click="myBack2()"></a>
+        </div>
+        <h1 class="title" style="top: 1px;"><img src='img/logo.png'  style=' height : 90px; '/></h1>
+      </ion-header-bar>
+
+      <ion-content padding="true" scroll="true" class="has-header">
+        <h4>Live Update! </h4>
+
+        <ul class="body-content-text">
+          <li class="li-view">{{jackpotValue}}</li>
+        </ul>
+      </ion-content>
+    </script>
+    <!--/* ************************ DATE : 4-5-2017  **************************** */-->
+
+<style>
+
+    h4{
+        color:#182d60;
+        text-align: left;
+        font-size: 24px;
+    }
+    h4 span{
+        color:#D83426;
+    }
+    body{
+        color:#5B7E95;
+    }
+    .item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated
+    {
+        color:#5B7E95!important;
+    }
+    .activer{
+        background-color:#D83426!important;
+    }
+</style>
+  </body>
+</html>
